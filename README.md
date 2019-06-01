@@ -16,7 +16,7 @@ bonus*:
 
 ### Tools used
 
-**Design:** Adobe XD, photoshop
+**Design:** Adobe XD, photoshop  
 **Front-end:** React, lazysizes, waypoints, react-transition-group
 
 ### Screenshot
