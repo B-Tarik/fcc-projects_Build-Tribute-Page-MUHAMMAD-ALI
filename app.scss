@@ -14,16 +14,16 @@ $desktop-max-width: 1920px;
 html {
   font-size: 10px;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   font-family: 'Open Sans', sans-serif;
-  width: 100vw;
+  color: #3a7b98;
+  width: 100%;
   height: 100vh;
-  color: #1D5168;
   min-width: $mobile-min-width;
   max-width: $desktop-max-width;
-  overflow-x: hidden;
   margin: auto;
 }
 
@@ -251,15 +251,15 @@ nav.home-nav.home-nav--fixed.home-nav--show {
   padding-top: 5px;
   padding-bottom: 37px;
   margin-bottom: -43px;
-  color: #1D5168;
+  color: #3a7b98;
 }
 
 .data-title {
   margin: 0 10px;
-  margin-bottom: 15px;
-  font-size: 1.8rem;
+  margin-bottom: 30px;
+  font-size: 2rem;
   position: relative;
-  color: #1D5168;
+  color: #3a7b98;
 }
 
 .data-image {
@@ -273,10 +273,10 @@ nav.home-nav.home-nav--fixed.home-nav--show {
 
 .data-content {
   text-align: left;
-  padding: 10px;
+  padding: 20px;
   font-size: 1.4rem;
   line-height: 1.7;
-  color: #1D5168;
+  color: #3a7b98;
   max-width: 800px;
   margin: auto;
 }
@@ -352,6 +352,10 @@ nav.home-nav.home-nav--fixed.home-nav--show {
     top: 0;
     height: 100%;
     object-fit: cover;
+  }
+  
+  h2 {
+    margin-bottom: 0;
   }
 }
 
@@ -461,7 +465,7 @@ blockquote {
 .credits {
   height: 100vh;
   max-height: $mobile-max-height;
-  min-height: 400px;
+  min-height: 500px;
   position: relative;
   color: white;
   display: flex;
@@ -554,6 +558,7 @@ blockquote {
 
 .modal-img {
   max-width: 100%;
+  max-height: 100%;
   height: auto;
   
   img {
@@ -581,62 +586,65 @@ blockquote {
 // Waypoints
 //-----------------
 
-.reveal-item {
+.hide-item {
   
   // Timeline
   .data-date, .data-title, .data-content{
     color: inherit;
-    transition: 1.5s color;
+    
   }
   .data-image {
     opacity: 0;
-    transition: 1.5s opacity;
   }
   
   // Achievements
   &.achievements-video {
     opacity: 0;
-    transition: 1.5s opacity;
   }
   
   // Quotes
   .quote {
     opacity: 0;
-    transition: 2s opacity;
   }
   
   // Credits
   .credits-rip, .credits-infos {
     opacity: 0;
-    transition: 5s opacity;
   }
   
-  &--is-visible {
-    
-    // Timeline
-    .data-date, .data-title, .data-content{
-      color: #1D5168;
-    }
-    .data-image {
-      opacity: 1;
-    }
-    
-    // Achievements
-    &.achievements-video {
-      opacity: 1;
-    }
-    
-    // Quotes
-    .quote {
-      opacity: 1;
-    }
-    
-    // Credits
-    .credits-rip, .credits-infos {
-      opacity: 1;
-    }
+}
+
+.reveal-item {
+
+  // Timeline
+  .data-date, .data-title, .data-content{
+    color: #3a7b98;
+    transition: 1.5s color;
+  }
+  .data-image {
+    opacity: 1;
+    transition: 1.5s opacity;
+  }
+
+  // Achievements
+  &.achievements-video {
+    opacity: 1;
+    transition: 1.5s opacity;
+  }
+
+  // Quotes
+  .quote {
+    opacity: 1;
+    transition: 2s opacity;
+  }
+
+  // Credits
+  .credits-rip, .credits-infos {
+    opacity: 1;
+    transition: 5s opacity;
   }
 }
+
 
 //-----------------
 // Media Queries
@@ -663,6 +671,37 @@ blockquote {
     
     strong {
       font-size: calc(3.1rem + 2.3 * ((100vw - 32rem) / 88));
+    }
+  }
+  
+  // Timeline
+  
+  .data-date {
+    font-size: calc(2.8rem + .3 * ((100vw - 32rem) / 88));
+  }
+  
+  .data-title {
+    font-size: calc(2rem + .5 * ((100vw - 32rem) / 88));
+  }
+  
+  .data-content {
+    font-size: calc(1.4rem + .3 * ((100vw - 32rem) / 88));
+  }
+  
+  // Achievements
+  
+  .achievements li::before {
+    font-size: calc(1.4rem + .3 * ((100vw - 32rem) / 88));
+  }
+  
+  .achievements {
+    
+    p {
+      font-size: calc(1.8rem + .3 * ((100vw - 32rem) / 88));
+    }
+    
+    li {
+      font-size: calc(1.4rem + .3 * ((100vw - 32rem) / 88));
     }
   }
   
@@ -764,8 +803,8 @@ blockquote {
 @media screen and (min-width: 1200px) {
   
   section {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
   
   h1 {
@@ -773,8 +812,8 @@ blockquote {
   }
   
   h2 {
-    font-size: 3.7rem;
-    margin-bottom: 45px;
+    font-size: 4.2rem;
+    margin-bottom: 95px;
   }
   
   // Home
@@ -811,9 +850,9 @@ blockquote {
   }
   
   .data-date {
-    font-size: calc(2.8rem + .7vw);
-    width: 300px;
-    top: -36px;
+    font-size: calc(4rem + .7vw);
+    width: 345px;
+    top: -47px;
     padding-top: 8px;
   }
   
@@ -823,7 +862,7 @@ blockquote {
   
   .data-flex {
     display: flex;
-    margin: 50px auto;
+    margin: 60px auto;
   }
   
   .data-image {
@@ -846,6 +885,9 @@ blockquote {
     margin: 0;
     margin-right: 50px;
     max-width: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   
   // Achievements
@@ -886,6 +928,10 @@ blockquote {
   
   // Credits
   
+  .credits {
+    min-height: 770px;
+  }
+  
   .credits-rip {
     margin-right: 5%;
   }
@@ -899,13 +945,13 @@ blockquote {
   
   .home::before {
     content: '';
-    background: url('https://i.postimg.cc/HsNfq2k8/ali.png');
+    background: url('https://github.com/B-Tarik/fcc-projects_Build-Tribute-Page-MUHAMMAD-ALI/raw/master/images/ali.png');
     position: absolute;
     z-index: 1;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     max-height: 1080px;
-    min-height: 600px;
+    min-height: 800px;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: 4% 13px;
@@ -987,7 +1033,7 @@ data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAI0lEQVQYV2
   // Timeline
   
   .data-date {
-    font-size: 4.2rem;
+    font-size: 5.344rem;;
   }
   
   .data-title {
