@@ -4,14 +4,14 @@
 it's a freecodecamp project in the "Responsive Web Design Projects" module, you have to build a Tribute Page.
 
 bonus*: 
-- Made a design with Adobe XD
+- Tribute Page design with Adobe XD
 - Image editing with photoshop
 - Mobile First Responsive Web Design
 - BEM methodology
 - Responsive typography
 - keyboard Accessible
 - SlideShow
-- Lazyloading images
+- Lazyloading images (no reflow)
 - Scroll animations
 
 ### Tools used
